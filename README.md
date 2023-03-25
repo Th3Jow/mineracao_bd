@@ -1,0 +1,15 @@
+# Instruções
+
+A base de dados deve ser obtida do repositório USP-FAPESP Data sharing Covid 19:
+https://repositoriodatasharingfapesp.uspdigital.usp.br/handle/item/1
+
+São 5 hospitais, com duas ou três tabelas por hospital (depende do hospital) armazenadas compactadas.
+Para carregar no SGBDR Postgres, executar (via PGadmin4) os scripts, nessa ordem:
+
+1 - COVID19_Define-21-02.sql Define a estrutura das tabelas no Esquema 'public'
+
+2 - COVID19_LoadData-21-02.sql Define os esquemas dos hospitais + D2 + Todos, e efetua a carga das tabelas correspondentes
+
+3 - COVID19_Corrige-21-02.sql Faz uma limpesa inicial dos dados
+
+4 - COVID19_Comments-21-02.sql (opcional) Define os atributos e tabelas, segundo a documentação do repositório FAPESP_Covid19
